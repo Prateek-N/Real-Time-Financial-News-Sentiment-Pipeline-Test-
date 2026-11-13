@@ -1,0 +1,9 @@
+{
+  "base_model": "ProsusAI/finbert",
+  "epochs": 2,
+  "batch_size": 32,
+  "learning_rate": 2e-05,
+  "seed": 42,
+  "best_val_macro_f1": 0.9242,
+  "device": "cpu"
+}

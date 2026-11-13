@@ -1,0 +1,7 @@
+{
+  "resamples": 1000,
+  "mean_delta_macro_f1": 0.0736,
+  "ci_95_lower": 0.056,
+  "ci_95_upper": 0.0915,
+  "excludes_zero": true
+}

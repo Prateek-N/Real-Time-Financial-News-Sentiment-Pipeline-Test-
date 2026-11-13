@@ -1,0 +1,17 @@
+{
+  "benchmark_sample_size": 5000,
+  "cold_run_duration_seconds": 170.443,
+  "cold_throughput_items_per_sec": 29.34,
+  "warm_cache_run_duration_seconds": 0.1235,
+  "warm_throughput_items_per_sec": 40478.39,
+  "speedup_factor": 1379.85,
+  "cache_stats": {
+    "total_lookups": 5000,
+    "cache_hits": 5000,
+    "cache_misses": 0,
+    "hit_rate": 1.0,
+    "fallback_active": true,
+    "model_version": "main",
+    "preprocess_version": "v1"
+  }
+}

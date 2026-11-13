@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://financial-news-sentiment.io/schemas/scored_article.schema.json",
+  "title": "ScoredFinancialNewsArticleEvent",
+  "description": "Canonical schema for model-scored financial news sentiment predictions.",
+  "type": "object",
+  "properties": {
+    "article_id": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "preprocess_version": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string",
+      "enum": ["positive", "negative", "neutral"]
+    },
+    "p_positive": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "p_negative": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "p_neutral": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "sentiment_index": {
+      "type": "number",
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "description": "Defined as p_positive - p_negative."
+    },
+    "cache_hit": {
+      "type": "boolean"
+    },
+    "inference_started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "score_completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["live", "replay", "historical", "benchmark"]
+    },
+    "publication_to_score_ms": {
+      "type": ["number", "null"],
+      "description": "score_completed_at - published_at in milliseconds when published_at is publisher_confirmed."
+    },
+    "connector_to_score_ms": {
+      "type": ["number", "null"],
+      "description": "score_completed_at - connector_received_at in milliseconds."
+    }
+  },
+  "required": [
+    "article_id",
+    "model_id",
+    "model_version",
+    "preprocess_version",
+    "label",
+    "p_positive",
+    "p_negative",
+    "p_neutral",
+    "sentiment_index",
+    "cache_hit",
+    "inference_started_at",
+    "score_completed_at",
+    "mode"
+  ],
+  "additionalProperties": true
+}
+

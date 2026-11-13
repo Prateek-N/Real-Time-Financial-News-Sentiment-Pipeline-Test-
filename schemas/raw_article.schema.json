@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://financial-news-sentiment.io/schemas/raw_article.schema.json",
+  "title": "RawFinancialNewsArticleEvent",
+  "description": "Canonical schema for normalized financial news events prior to inference scoring.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "article_id": {
+      "type": "string",
+      "description": "Unique stable identifier for the article (e.g. publisher-id)."
+    },
+    "provider_event_id": {
+      "type": "string",
+      "description": "Native event/article ID from provider or vendor."
+    },
+    "publisher_id": {
+      "type": "string",
+      "description": "Audited publisher identity (e.g. reuters, bloomberg, cnbc, marketwatch, wsj)."
+    },
+    "provider_id": {
+      "type": "string",
+      "description": "Originating delivery feed or provider identifier."
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Normalized headline text."
+    },
+    "language": {
+      "type": "string",
+      "default": "en"
+    },
+    "article_url": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "tickers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "published_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Original publication timestamp in ISO 8601 UTC."
+    },
+    "published_at_trust": {
+      "type": "string",
+      "enum": ["publisher_confirmed", "provider_stamped", "inferred", "missing_excluded"]
+    },
+    "provider_received_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "connector_received_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "ingested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ingestion_mode": {
+      "type": "string",
+      "enum": ["live", "replay", "historical", "benchmark"]
+    },
+    "content_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_license_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "article_id",
+    "publisher_id",
+    "provider_id",
+    "headline",
+    "published_at_trust",
+    "ingested_at",
+    "ingestion_mode",
+    "content_sha256"
+  ],
+  "additionalProperties": true
+}
+

@@ -1,0 +1,6 @@
+publisher_id,display_name,provider_id,endpoint_type,auth_reference,allowed_historical_lookback_days,timestamp_semantics,rate_limit_per_min,storage_permitted,attribution_url
+reuters,Reuters Financial News,reuters_direct_feed,push_websocket,LIC-REUTERS-ENT-2026-0881,180,publisher_confirmed,120,True,https://www.reuters.com/markets
+bloomberg,Bloomberg News Wire,bloomberg_enterprise_api,push_webhook,LIC-BBG-SYND-2026-4421,180,publisher_confirmed,120,True,https://www.bloomberg.com/markets
+cnbc,CNBC Markets & Business,cnbc_syndication_api,push_webhook,LIC-CNBC-DIG-2026-9014,180,publisher_confirmed,100,True,https://www.cnbc.com/markets
+marketwatch,MarketWatch Financial Intelligence,dowjones_marketwatch_stream,push_websocket,LIC-DJMW-SYND-2026-1187,180,publisher_confirmed,80,True,https://www.marketwatch.com
+wsj,Wall Street Journal Markets,dowjones_wsj_direct,push_websocket,LIC-WSJ-CORP-2026-7352,180,publisher_confirmed,80,True,https://www.wsj.com/news/markets

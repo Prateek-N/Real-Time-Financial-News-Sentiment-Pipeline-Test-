@@ -1,0 +1,2 @@
+minute,elapsed_seconds,articles_scored_this_minute,effective_rate_per_min,kafka_queue_lag,cumulative_scored
+1,30.6,200,392.0,0,200

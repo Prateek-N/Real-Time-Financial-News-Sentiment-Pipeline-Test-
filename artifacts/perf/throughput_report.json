@@ -1,0 +1,33 @@
+{
+  "benchmark_timestamp_utc": "2026-11-13T19:04:19.375140+00:00",
+  "workload_mode": "live",
+  "target_rate_per_min": 200,
+  "duration_minutes_configured": 1.0,
+  "total_elapsed_seconds": 30.61,
+  "total_events_ingested": 200,
+  "total_events_scored": 200,
+  "sustained_throughput_articles_per_min": 392.0,
+  "throughput_pass_standard_met": true,
+  "max_kafka_lag_observed": 0,
+  "final_kafka_lag": 0,
+  "publisher_distribution": {
+    "reuters": 40,
+    "bloomberg": 51,
+    "cnbc": 50,
+    "marketwatch": 31,
+    "wsj": 28
+  },
+  "latencies_ms": {
+    "publication_to_score": {
+      "p50": 1516.56,
+      "p95": 2085.51,
+      "p99": 2185.48,
+      "meets_sub_5s_target": true
+    },
+    "connector_to_score": {
+      "p50": 88.48,
+      "p95": 100.29,
+      "p99": 125.65
+    }
+  }
+}

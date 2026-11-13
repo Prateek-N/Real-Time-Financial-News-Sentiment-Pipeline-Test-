@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-11-13T19:03:29.232508+00:00",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "cpu_count_logical": 12,
+  "cpu_count_physical": 10,
+  "ram_total_gb": 15.63,
+  "python_version": "3.14.3",
+  "torch_version": "2.13.0+cpu",
+  "cuda_available": false,
+  "gpu_details": "None (CPU Execution)"
+}

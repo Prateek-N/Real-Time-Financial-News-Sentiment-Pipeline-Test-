@@ -1,0 +1,74 @@
+# Configuration for 5 Authorized Original News Publishers
+# Definition: Each source represents an authentic publisher identity, not an alias or endpoint.
+
+sources:
+  - publisher_id: "reuters"
+    display_name: "Reuters Financial News"
+    provider_id: "reuters_direct_feed"
+    endpoint_type: "push_websocket"
+    auth_reference: "LIC-REUTERS-ENT-2026-0881"
+    attribution_url: "https://www.reuters.com/markets"
+    allowed_fields: ["article_id", "headline", "tickers", "published_at", "article_url"]
+    allowed_historical_lookback_days: 180
+    timestamp_semantics: "publisher_confirmed"
+    target_weight: 0.25
+    rate_limit_per_min: 120
+    is_active: true
+    storage_permitted: true
+
+  - publisher_id: "bloomberg"
+    display_name: "Bloomberg News Wire"
+    provider_id: "bloomberg_enterprise_api"
+    endpoint_type: "push_webhook"
+    auth_reference: "LIC-BBG-SYND-2026-4421"
+    attribution_url: "https://www.bloomberg.com/markets"
+    allowed_fields: ["article_id", "headline", "tickers", "published_at", "article_url"]
+    allowed_historical_lookback_days: 180
+    timestamp_semantics: "publisher_confirmed"
+    target_weight: 0.25
+    rate_limit_per_min: 120
+    is_active: true
+    storage_permitted: true
+
+  - publisher_id: "cnbc"
+    display_name: "CNBC Markets & Business"
+    provider_id: "cnbc_syndication_api"
+    endpoint_type: "push_webhook"
+    auth_reference: "LIC-CNBC-DIG-2026-9014"
+    attribution_url: "https://www.cnbc.com/markets"
+    allowed_fields: ["article_id", "headline", "tickers", "published_at", "article_url"]
+    allowed_historical_lookback_days: 180
+    timestamp_semantics: "publisher_confirmed"
+    target_weight: 0.20
+    rate_limit_per_min: 100
+    is_active: true
+    storage_permitted: true
+
+  - publisher_id: "marketwatch"
+    display_name: "MarketWatch Financial Intelligence"
+    provider_id: "dowjones_marketwatch_stream"
+    endpoint_type: "push_websocket"
+    auth_reference: "LIC-DJMW-SYND-2026-1187"
+    attribution_url: "https://www.marketwatch.com"
+    allowed_fields: ["article_id", "headline", "tickers", "published_at", "article_url"]
+    allowed_historical_lookback_days: 180
+    timestamp_semantics: "publisher_confirmed"
+    target_weight: 0.15
+    rate_limit_per_min: 80
+    is_active: true
+    storage_permitted: true
+
+  - publisher_id: "wsj"
+    display_name: "Wall Street Journal Markets"
+    provider_id: "dowjones_wsj_direct"
+    endpoint_type: "push_websocket"
+    auth_reference: "LIC-WSJ-CORP-2026-7352"
+    attribution_url: "https://www.wsj.com/news/markets"
+    allowed_fields: ["article_id", "headline", "tickers", "published_at", "article_url"]
+    allowed_historical_lookback_days: 180
+    timestamp_semantics: "publisher_confirmed"
+    target_weight: 0.15
+    rate_limit_per_min: 80
+    is_active: true
+    storage_permitted: true
+

@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-11-13T19:04:19.375845+00:00",
+  "evaluation_sample_size": 289,
+  "timestamp_trust_coverage_pct": 100.0,
+  "stage_breakdown_p95_ms": {
+    "publisher_to_connector_receipt": 1985.22,
+    "connector_to_score_processing": 100.29,
+    "total_publication_to_score": 2085.51
+  },
+  "target_sla_ms": 5000.0,
+  "sla_achieved": true
+}
